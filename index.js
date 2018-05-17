@@ -8,7 +8,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const Stock = require('./models/stock');
 //DB setup
-mongoose.connect('mongodb://localhost/stock119');
+mongoose.connect('mongodb://'+process.env.username+':'+process.env.password+'@ds127490.mlab.com:27490/stocks');
 //app setup
 
 app.use(morgan('combined'));
